@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane hgap="4.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" vgap="4.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+
+  </rowConstraints>
+    <stylesheets>
+        <URL value="@style.css" />
+    </stylesheets>
+   <children>
+      <Label fx:id="lblIme" text="Ime:" />
+      <Label fx:id="lblPrezime" text="Prezime:" GridPane.rowIndex="1" />
+      <Label fx:id="lblIndex" text="Broj indeksa:" GridPane.rowIndex="2" />
+      <Separator prefWidth="200.0" GridPane.columnSpan="4" GridPane.rowIndex="3" />
+      <Label fx:id="lblJMBG" text="JMBG:" GridPane.columnIndex="2" />
+      <Label fx:id="lblDatRodj" text="Datum rodjenja:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+      <Label fx:id="lblMjestoRodj" text="Mjesto rodjenja:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+      <Label fx:id="lblAdresa" text="Adresa:" GridPane.rowIndex="4" />
+      <Label fx:id="lblTelefon" text="Telefon:" GridPane.rowIndex="5" />
+      <Label fx:id="lblMail" text="E-Mail:" GridPane.rowIndex="6" />
+      <Label fx:id="lblOdsjek" text="Odsjek:" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+      <Label fx:id="lblGodina" text="Godina:" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+      <Label fx:id="lblCiklus" text="Ciklus studija:" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+      <RadioButton fx:id="rbRedovan" mnemonicParsing="false" text="Redovan" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+      <RadioButton fx:id="rbSamofinansirajuci" mnemonicParsing="false" text="Redovan(samofinansirajući)" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+      <CheckBox fx:id="cboxBoracka" mnemonicParsing="false" text="Pripadnik borackim pravima" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+      <Button fx:id="btnPotvrdi" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#formularPotvrdi" text="Potvrdi" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="9" />
+      <TextField fx:id="tfIme" GridPane.columnIndex="1">
+         <tooltip>
+            <Tooltip text="Unesite ime" />
+         </tooltip>
+      </TextField>
+      <TextField fx:id="tfPrezime" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <tooltip>
+            <Tooltip text="Unesite prezime" />
+         </tooltip>
+      </TextField>
+      <TextField fx:id="tfIndex" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <tooltip>
+            <Tooltip text="Unesite broj indexa" />
+         </tooltip>
+      </TextField>
+      <TextField fx:id="tfJMBG" GridPane.columnIndex="3">
+         <tooltip>
+            <Tooltip text="Unesite JMBG" />
+         </tooltip>
+      </TextField>
+      <TextField fx:id="tfAdresa" GridPane.columnIndex="1" GridPane.rowIndex="4">
+         <tooltip>
+            <Tooltip text="Unesite adresu stanovanja" />
+         </tooltip>
+      </TextField>
+      <TextField fx:id="tfTelefon" GridPane.columnIndex="1" GridPane.rowIndex="5">
+         <tooltip>
+            <Tooltip text="Unesite Vaš kontakt telefon" />
+         </tooltip>
+      </TextField>
+      <TextField fx:id="tfMail" GridPane.columnIndex="1" GridPane.rowIndex="6">
+         <tooltip>
+            <Tooltip text="Unesite Vaš E-Mail" />
+         </tooltip>
+      </TextField>
+      <ChoiceBox fx:id="cboxOdsjek" prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+      <ChoiceBox fx:id="cboxGodina" prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+      <ChoiceBox fx:id="cboxCiklus" prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+      <ComboBox fx:id="comboMjestoRodj" accessibleText="" editable="true" prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+      <DatePicker fx:id="datePicker" editable="false" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</GridPane>
